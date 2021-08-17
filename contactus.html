@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cloud Chef</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body class="home-page">
+    <div class="overlay hide"></div>
+    <header class="home-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html"><span class="orange">C</span>loud <span class="orange">C</span>hef</a>
+            </div>
+            <ul class="main-nav__list">
+                <li class="main-nav__list-item">
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="main-nav__list-item">
+                    <a href="about.html">ABOUT CLOUD CHEF</a>
+                </li>
+                <li class="main-nav__list-item">
+                    <a href="contactus.html">CONTACT CLOUD CHEF</a>
+                </li>
+                <li class="main-nav__list-item">
+                    <a href="howitworks.html">HOW IT WORKS</a>
+                </li>
+            </ul>
+            <div class="menu-btn mobile-menu">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+        </nav>
+        <nav class="mobile-nav hide">
+            <div class="logo">
+                <a href="index.html"><span class="orange">C</span>loud <span class="orange">C</span>hef</a></a>
+            </div>
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__list-item">
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="mobile-nav__list-item">
+                    <a href="about.html">ABOUT CLOUD CHEF</a>
+                </li>
+                <li class="mobile-nav__list-item">
+                    <a href="contactus.html">CONTACT CLOUD CHEF</a>
+                </li>
+                <li class="mobile-nav__list-item">
+                    <a href="howitworks.html">HOW IT WORKS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner"
+            style="height: 50vh;background-image: url(./images/Spicy-Braised-Tofu.JPG); border-bottom: 1px solid var(--orange);">
+            <div class="banner-text" style="top: 80px">
+                <p><span style="font-size: 5rem; font-style: italic;">Contact Us</span></p>
+            </div>
+        </section>
+        <div class="form-page">
+            <div class="formBox">
+                <div class="form-contact">
+                    <div class="contact-details">
+                        <h1>Contact Us</h1>
+                        <p>Our team is happy to answer any questions. Please fill out the form below and we'll get back
+                            to
+                            you.
+                        </p>
+                    </div>
+                    <form action="index.html" method="POST" class="section-form">
+                        <div class="form-control">
+                            <label>Subject</label>
+                            <input type="text" name="subject" id="subject" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                        </div>
+                        <div class="submit-control">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer" style="background: linear-gradient(#ef1f1f, var(--orange));">
+        <div class="page-footer-info">
+            <ul class="page-footer__list">
+                <li class="page-footer__list-header">SERVICE</li>
+                <li class="page-footer__list-item"><a href="howitworks.html">How it works</a></li>
+                <li class="page-footer__list-item"><a href="#">Food safety</a></li>
+                <li class="page-footer__list-item"><a href="#">Home chefs</a></li>
+            </ul>
+            <ul class="page-footer__list">
+                <li class="page-footer__list-header">COMPANY</li>
+                <li class="page-footer__list-item"><a href="about.html">About us</a></li>
+                <li class="page-footer__list-item"><a href="#">Contact us</a></li>
+            </ul>
+            <div class="page-footer__details">
+                <h2>Check out dishes</h2>
+                <p>Sign up for weekly recipes and information on homemade dishes</p>
+                <form class="page-footer__form" action="#">
+                    <input disabled class type="email" placeholder="Email Address">
+                    <input disabled class type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="page-footer-appInfo">
+            <div class="appInfo-img">
+                <a href="#"><img src="images/IMG_4512.PNG" alt="google play" width="120"></a>
+            </div>
+            <p>&copy; 2021 Copyright | Cloud Chef</p>
+            <div class="media-info">
+                <a href="#"><img src="images/IMG_4513.PNG" alt="facebook logo" width="35"></a>
+                <a href="#"><img src="images/IMG_4514.PNG" alt="instagram logo" width="40"></a>
+                <a href="#"><img src="images/IMG_4515.PNG" alt="linkedIn logo" width="30"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

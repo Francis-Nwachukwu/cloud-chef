@@ -1,0 +1,446 @@
+:root {
+  --orange: rgb(255, 132, 0);
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system,
+    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  margin: 0;
+}
+main {
+  margin-top: 50px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.hide {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+}
+.orange {
+  color: rgb(255, 132, 0);
+}
+.header {
+  padding: 30px;
+  color: white;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0 0;
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid rgb(255, 132, 0) 2px;
+}
+.main-nav__list {
+  margin-left: auto;
+}
+.main-nav__list,
+.mobile-nav__list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.main-nav__list-item {
+  display: inline-flex;
+  margin: 10px 30px;
+}
+.main-nav__list-item {
+  margin: 10px;
+}
+.main-nav__list-item a:hover,
+.main-nav__list-item a:focus,
+.main-nav__list-item a:active,
+.mobile-nav__list-item a:hover,
+.mobile-nav__list-item a:focus,
+.mobile-nav__list-item a:active {
+  color: var(--orange);
+}
+
+.main-nav__list-item a:hover::after,
+.main-nav__list-item a:focus::after,
+.main-nav__list-item a:active::after,
+.mobile-nav__list-item a:hover::after,
+.mobile-nav__list-item a:focus::after,
+.mobile-nav__list-item a:active::after {
+  width: 100%;
+}
+.main-nav__list-item a:hover,
+.main-nav__list-item a::after,
+.mobile-nav__list-item a:hover,
+.mobile-nav__list-item a::after {
+  border-bottom: 1px solid var(--orange);
+}
+/* Mobile Navbar */
+.mobile-menu {
+  display: inline;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.5s;
+  z-index: 5;
+}
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 55vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 0;
+  z-index: 10;
+  transition: all 0.5s ease-in;
+}
+.mobile-nav .logo {
+  font-size: 2rem;
+  padding-left: 10px;
+  margin: 20px 0 20px 0;
+}
+.mobile-nav__list-item {
+  padding: 20px;
+  border-bottom: 0.5px solid var(--orange);
+}
+.menu-btn {
+  padding: 15px 15px 0 0;
+  z-index: 3;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #000;
+  transition: 0.5s ease-in-out;
+}
+.menu-btn.open {
+  transform: rotate(180deg);
+  transition: 0.5s ease-in-out;
+}
+
+.menu-btn.open .btn-line {
+  background: var(--orange);
+}
+.menu-btn.open .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.open .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* banner styles */
+.banner {
+  height: 80vh;
+  background-image: url(./images/indian\ food.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: 10% 65%;
+  border: 1px solid var(--orange);
+}
+.banner-text {
+  position: relative;
+  top: 140px;
+  left: 0;
+  text-align: center;
+}
+.banner p {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: #fff;
+}
+/* Company-info styles */
+.company-info {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0 40px;
+}
+.company-info__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.company-info__list-item {
+  flex: 1 0 100px;
+  padding: 0 20px;
+}
+.company-info__list-img img {
+  width: 35%;
+}
+.company-info__list-text h3 {
+  color: var(--orange);
+}
+.about-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 1.6rem;
+  margin: 0 20px;
+}
+.about-info h1{
+  text-align: center;
+}
+.about-info__label,
+.about-info__vision {
+  flex: 1 1 auto;
+}
+.about-info__vision {
+  /* text-align: center; */
+}
+.about-info__vision h1 {
+  font-size: 2.5rem;
+}
+.vision-list {
+  /* text-align: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  list-style-type: none;
+}
+.vision-list__item {
+  padding: 0 10px 25px 10px;
+}
+.showcase {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ef1f1f;
+  color: white;
+  margin-bottom: 45px;
+}
+.showcase-img {
+  flex: 1 1 auto;
+  margin-top: 20px;
+}
+.showcase-img img {
+  width: 100%;
+}
+.showcase-input {
+  font-size: 1.6rem;
+  margin-left: 30px;
+  flex: 1 1 auto;
+}
+.showcase-input a {
+  padding: 5px;
+  background: linear-gradient(white, var(--orange));
+  border: 2px solid white;
+  border-radius: 6px;
+}
+.showcase-input a:hover {
+  background: linear-gradient(var(--orange), white);
+  transition: 1s;
+}
+.showcase-form input[type="text"] {
+  height: 40px;
+  border: 2px solid var(--orange);
+  border-radius: 5px;
+}
+.showcase-form input[type="text"]:focus {
+  border: 2px solid var(--orange);
+}
+.showcase-form input[type="submit"] {
+  height: 40px;
+  background-color: var(--orange);
+  color: white;
+  border: 2px solid rgb(255, 132, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.showcase-form input[type="submit"]:hover {
+  background-color: rgba(255, 132, 0, 0.3);
+  transition: 1s;
+}
+.form-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-contact {
+  margin: 50px;
+  padding: 40px;
+  background: linear-gradient(white, var(--orange));
+  border-radius: 5px;
+}
+.contact-details h1 {
+  font-size: 2.5rem;
+  color: var(--orange);
+}
+.form-control {
+  padding-bottom: 20px;
+}
+.form-control input {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: 1px solid var(--orange);
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.form-control input:hover{
+  border-top:none;
+  border-right:none;
+  border-bottom:1px solid var(--orange);
+  border-left:none;
+  transition:1s;
+}
+.form-control textarea {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+}
+.submit-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-control input {
+  cursor: pointer;
+  background-color: #ef1f1f;
+  color: white;
+  padding: 10px;
+  outline-color: var(--orange);
+  border: 2px solid rgba(255, 132, 0, 0.8);
+  border-radius: 5px;
+}
+.page-footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 1.3rem;
+  margin: 0 20px;
+}
+.page-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+}
+.page-footer__list-header {
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.page-footer__list-item a {
+  color: var(--orange);
+}
+.page-footer__list-item:hover {
+  font-weight: bold;
+}
+.page-footer__details {
+  text-align: center;
+  padding-left: 10px;
+  border-left: 1px solid var(--orange);
+}
+.page-footer__form input[type="email"] {
+  padding: 7px;
+  height: 50px;
+  border-radius: 5px;
+}
+.page-footer__form input[type="submit"] {
+  height: 62px;
+  color: white;
+  border: 2px solid var(--orange);
+  border-radius: 5px;
+  background-color: var(--orange);
+}
+.page-footer-appInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-footer-appInfo p {
+  margin: 0;
+}
+@media only screen and (max-width: 567px) {
+  .main-nav__list {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .logo {
+    margin: auto;
+  }
+  .banner {
+    height: 60vh;
+  }
+  .banner-text {
+    top: 55px;
+  }
+  .company-info__list {
+    flex-wrap: wrap;
+  }
+  .about-info {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .logo {
+    margin: auto;
+  }
+  .main-nav__list {
+    margin: auto;
+  }
+  .company-info__list-item {
+    flex: 1 0 100%;
+  }
+  .company-info {
+    font-size: 1.3rem;
+  }
+  .showcase {
+    flex-wrap: wrap;
+  }
+  .showcase-input {
+    font-size: 1.2rem;
+  }
+  .showcase-form input[type="text"],
+  .showcase-form input[type="submit"] {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+/* ipad pro */
+@media only screen and (max-width: 1024px) {
+  .banner {
+    height: 60vh;
+  }
+  .showcase-input h1 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 905px) {
+  .page-footer__details {
+    border-left: 0;
+    border-top: 1px solid var(--orange);
+  }
+}
